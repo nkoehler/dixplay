@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+}
+
+.main-container {
+    padding: 20px;
+    background-color: black;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.main-image {
+    display: block;
+    width: 100%;
+    height: 40vh;
+    object-fit: contain;
+}
+
+.comments-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
