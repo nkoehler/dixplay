@@ -1,0 +1,1 @@
+uploadImageInput.addEventListener('change', uploadImage);

@@ -1,0 +1,24 @@
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.deps.json
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.runtimeconfig.json
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.runtimeconfig.dev.json
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.dll
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.csprojAssemblyReference.cache
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.csproj.CoreCompileInputs.cache
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfoInputs.cache
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfo.cs
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.dll
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
+C:\Team Services\C-Sharp .NET Applications\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\default.jpg
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\default.jpg
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.deps.json
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.runtimeconfig.json
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.runtimeconfig.dev.json
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.dll
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.csprojAssemblyReference.cache
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.csproj.CoreCompileInputs.cache
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfoInputs.cache
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfo.cs
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.dll
+C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
