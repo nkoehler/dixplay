@@ -46,12 +46,12 @@ socket.onerror = function (event) {
 };
 
 function sendToServer(message, type) {
-    var message = {
+    var msg = {
         type: type,
         payload: JSON.stringify(message)
     };
 
-    var packet = JSON.stringify(message);
+    var packet = JSON.stringify(msg);
 
     socket.send(packet);
 }
