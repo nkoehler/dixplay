@@ -6,14 +6,18 @@ namespace DixplayServerNETCore.ServerModels
 {
     public class Dixplay
     {
-        public string Photo { get; set; }
+        public Photo Photo { get; set; }
 
-        public LinkedList<string> Comments { get; set; }
+        public LinkedList<Comment> Comments { get; set; }
 
         public Dixplay()
         {
-            Photo = "data:*/*;base64," + Convert.ToBase64String(File.ReadAllBytes("default.jpg"));
-            Comments = new LinkedList<string>();
+            Photo = new Photo
+            {
+                Data = "data:*/*;base64," + Convert.ToBase64String(File.ReadAllBytes("default.jpg")),
+                Date = DateTime.Now
+            };
+            Comments = new LinkedList<Comment>();
         }
     }
 }

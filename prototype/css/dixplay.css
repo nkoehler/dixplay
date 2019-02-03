@@ -25,8 +25,24 @@ html, body {
 }
 
 .comments-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.comments-controls {
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.comments-title {
+    display: block;
+    font-weight: bold;
+}
+
+.comments-group {
+    display: flex;
+    flex-direction: column;
 }

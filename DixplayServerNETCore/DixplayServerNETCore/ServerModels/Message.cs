@@ -44,7 +44,7 @@ namespace DixplayServerNETCore.ServerModels
             return Write(MessageType.GetDixplay, dixplay);
         }
 
-        public static string Build(LinkedList<string> comments)
+        public static string Build(LinkedList<Comment> comments)
         {
             return Write(MessageType.GetComments, comments);
         }

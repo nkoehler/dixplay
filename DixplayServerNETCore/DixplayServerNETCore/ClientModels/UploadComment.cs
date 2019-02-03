@@ -4,6 +4,6 @@ namespace DixplayServerNETCore.ClientModels
 {
     public class UploadComment
     {
-        public string Comment { get; set; }
+        public string Text { get; set; }
     }
 }

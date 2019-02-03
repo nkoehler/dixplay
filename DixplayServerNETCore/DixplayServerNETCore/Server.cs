@@ -43,15 +43,15 @@ namespace DixplayServerNETCore
 
                     if(mail.Type == MessageType.UploadPhoto)
                     {
-                        dixplay.Photo = JsonConvert.DeserializeObject<UploadPhoto>(mail.Payload).Data;
-                        dixplay.Comments = new LinkedList<string>();
+                        dixplay.Photo = new Photo(JsonConvert.DeserializeObject<UploadPhoto>(mail.Payload));
+                        dixplay.Comments = new LinkedList<Comment>();
 
                         Broadcast(sockets, Message.Build(dixplay));
                     }
 
                     else if(mail.Type == MessageType.UploadComment)
                     {
-                        dixplay.Comments.AddFirst(JsonConvert.DeserializeObject<UploadComment>(mail.Payload).Comment);
+                        dixplay.Comments.AddFirst(new Comment(JsonConvert.DeserializeObject<UploadComment>(mail.Payload)));
 
                         Broadcast(sockets, Message.Build(dixplay.Comments));
                     }

@@ -11,20 +11,25 @@
 
     <div class="main-container">
         <div class="main-title">Dixplay</div>
-        <img id="main-image" src="https://pay.google.com/about/static/images/social/knowledge_graph_logo.png" class="main-image">
+        <img id="displayMainPhoto" src="https://pay.google.com/about/static/images/social/knowledge_graph_logo.png" class="main-image">
     </div>
     <div class="comments-container">
-        Comments
-        <input id="uploadImageInput" type="file" accept="image/*">
+        <div class="comments-controls">
+                <input id="uploadPhotoInput" type="file" accept="image/*">
+                <input id="writeCommentInput" type="text" placeholder="Enter Comment">
+                <button id="uploadCommentInput" type="button">Send</button>
+        </div>
+        <div class="comments-title">
+            Comments
+        </div>
+        <div id="displayMainComments" class="comments-group">
+
+        </div>
     </div>
 
 </body>
 
-<script type="text/javascript" src="js/globals.js"></script>
-
+<script type="text/javascript" src="js/globals.js"></script> <!-- Keep this one first -->
 <script type="text/javascript" src="js/server.js"></script>
-<script type="text/javascript" src="js/upload.js"></script>
-
-<script type="text/javascript" src="js/events.js"></script>
 
 </html>

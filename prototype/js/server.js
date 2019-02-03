@@ -6,7 +6,7 @@ var MessageType = {
     // Server -> User level
     GetDixplay: 201,
     GetComments: 202,
-  };
+};
 
 const socket = new WebSocket('ws://localhost:8008');
 
@@ -19,21 +19,33 @@ socket.onmessage = function (event) {
     console.log(msg["Type"]);
     var payload = JSON.parse(msg["Payload"]);
 
-    if(msg["Type"] == MessageType.GetDixplay)
-    {
+    if (msg["Type"] == MessageType.GetDixplay) {
         /* Dixplay Model */
         /*
-            Photo: string;
-            Comments: string[];
+            Photo = {
+                Data: string;
+                Date: string;
+            };
+            Comments[] = {
+                Text: string;
+                Date: string;
+            };
         */
-        
-        mainImage.src = payload["Photo"];
-        // comments.whatever = comments;
+
+        updatePhoto(payload["Photo"]);
+        console.log(payload["Comments"]);
+        updateComments(payload["Comments"]);
     }
 
-    else if (msg["Type"] == MessageType.GetComments)
-    {
-
+    else if (msg["Type"] == MessageType.GetComments) {
+        /* Comments Model */
+        /*
+            [] of {
+                Text: string;
+                Date: string;
+            }
+        */
+       updateComments(payload);
     }
 };
 
@@ -45,6 +57,23 @@ socket.onerror = function (event) {
     console.log('Error', event);
 };
 
+function updatePhoto(photo) {
+    displayMainPhoto.src = photo["Data"];
+    displayMainPhoto.alt = photo["Date"];
+}
+
+function updateComments(comments) {
+    var commentsToRemove = displayMainComments.getElementsByClassName('comment');
+    Array.from(commentsToRemove).forEach(e => e.parentNode.removeChild(e));
+
+    Array.from(comments).forEach(comment => {
+        var div = document.createElement('div');
+        div.className = "comment";
+        div.innerHTML = comment["Text"] + ' - ' + comment["Date"];
+        displayMainComments.append(div);
+    })
+}
+
 function sendToServer(message, type) {
     var msg = {
         type: type,
@@ -55,3 +84,35 @@ function sendToServer(message, type) {
 
     socket.send(packet);
 }
+
+function uploadPhoto(event) {
+    var file = event.target.files[0];
+
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var uploadPhoto = {
+                Data: reader.result,
+            };
+            sendToServer(uploadPhoto, MessageType.UploadPhoto);
+        }
+        reader.readAsDataURL(file);
+    }
+}
+
+function uploadComment() {
+    var comment = writeCommentInput.value;
+    console.log(comment);
+
+    if (comment) {
+        var uploadComment = {
+            Text: comment
+        };
+
+        sendToServer(uploadComment, MessageType.UploadComment);
+    }
+}
+
+// register events
+uploadPhotoInput.addEventListener('change', uploadPhoto);
+uploadCommentInput.addEventListener('click', uploadComment);

@@ -1,3 +1,8 @@
-var uploadImageInput = document.getElementById('uploadImageInput');
+// User Input
+var uploadPhotoInput = document.getElementById('uploadPhotoInput');
+var writeCommentInput = document.getElementById('writeCommentInput');
+var uploadCommentInput = document.getElementById('uploadCommentInput');
 
-var mainImage = document.getElementById('main-image');
+// Display
+var displayMainPhoto = document.getElementById('displayMainPhoto');
+var displayMainComments = document.getElementById('displayMainComments');
