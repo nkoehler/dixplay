@@ -2,8 +2,10 @@
 <html>
 
 <head>
-    <title>Dixplay</title>
 
+    <title>Dixplay</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/dixplay.css">
 </head>
 
@@ -16,15 +18,18 @@
     <div class="comments-container">
         <div class="comments-controls">
                 <input id="uploadPhotoInput" type="file" accept="image/*">
-                <input id="writeCommentInput" type="text" placeholder="Enter Comment">
-                <button id="uploadCommentInput" type="button">Send</button>
+				<button id="photoSubmit" class="submit-button"type="submit">submit</button>
         </div>
         <div class="comments-title">
             Comments
         </div>
         <div id="displayMainComments" class="comments-group">
-
+			hi
         </div>
+		<div id="commentContainer" class="comments-upload">
+		    <input id="writeCommentInput" class="comment-box" type="text" placeholder="Enter Comment">
+			<button id="uploadCommentInput" class="comment-button" type="button">Send</button>
+		</div>
     </div>
 
 </body>

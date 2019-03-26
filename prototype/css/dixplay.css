@@ -1,21 +1,28 @@
 html, body {
     margin: 0;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+
+
 }
 
 .main-container {
     padding: 20px;
-    background-color: black;
+    border-bottom: 1px solid grey;
+    background-color: #212121;
+
 }
 
 .main-title {
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
 }
+
 
 .main-image {
     display: block;
@@ -27,6 +34,7 @@ html, body {
 .comments-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -44,5 +52,27 @@ html, body {
 
 .comments-group {
     display: flex;
+	width: 50%;
+	height: 200px;
+	align-items: left;
+	right:50%;
+	justify-content: left;
     flex-direction: column;
+	overflow-y: scroll;
+    border: 1px solid grey;
+}
+.comments-upload{
+    display: flex;
+    width: 50%;
+}
+.comment-box{
+    display: inline-block;
+    width:75%;
+}
+.comment-button{
+    display: inline-block;
+    width:25%;
+}
+.submit-button{
+	display:flex;
 }
