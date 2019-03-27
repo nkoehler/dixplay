@@ -6,3 +6,4 @@ var uploadCommentInput = document.getElementById('uploadCommentInput');
 // Display
 var displayMainPhoto = document.getElementById('displayMainPhoto');
 var displayMainComments = document.getElementById('displayMainComments');
+<

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/dixplay.css">
 </head>
 
-<body>
+<body onload="namePrompt()">
 
     <div class="main-container">
         <div class="main-title">Dixplay</div>
@@ -24,7 +24,7 @@
             Comments
         </div>
         <div id="displayMainComments" class="comments-group">
-			hi
+			<div id="displayMessage" class="message-group"></div>
         </div>
 		<div id="commentContainer" class="comments-upload">
 		    <input id="writeCommentInput" class="comment-box" type="text" placeholder="Enter Comment">
@@ -33,7 +33,16 @@
     </div>
 
 </body>
-
+<script>
+	function namePrompt() {
+	  var person = prompt("Please enter your name:", "Steve");
+	  if (person == null || person == "") {
+		while(person==null || person== ""){
+			var person = prompt("Please enter your name:", "Steve");
+		}
+	  }
+	}
+</script>
 <script type="text/javascript" src="js/globals.js"></script> <!-- Keep this one first -->
 <script type="text/javascript" src="js/server.js"></script>
 
