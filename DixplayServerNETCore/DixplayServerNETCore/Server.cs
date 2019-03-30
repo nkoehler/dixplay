@@ -3,7 +3,6 @@ using DixplayServerNETCore.ServerModels;
 using Fleck;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace DixplayServerNETCore
@@ -17,45 +16,49 @@ namespace DixplayServerNETCore
             Console.WriteLine("------------------------- Dixplay Server -------------------------");
 
             // Init
-            Dixplay dixplay = new Dixplay();
+            State state = new State();
 
             // Server
-            List<IWebSocketConnection> sockets = new List<IWebSocketConnection>();
             WebSocketServer server = new WebSocketServer("ws://0.0.0.0:8008");
 
             server.Start(socket =>
             {
                 socket.OnOpen = () =>
                 {
-                    // Add socket
-                    sockets.Add(socket);
+                    state.Sockets.Add(socket);
 
-                    socket.Send(Message.Build(dixplay));
+                    socket.Send(Message.Build(state.Photo));
+                    socket.Send(Message.Build(state.Comments));
+                    socket.Send(Message.Build(state.Votable));
                 };
                 socket.OnClose = () =>
                 {
-                    // Remove socket
-                    sockets.Remove(socket);
+                    state.Sockets.Remove(socket);
                 };
                 socket.OnMessage = message =>
                 {
                     Message mail = new Message(message);
 
-                    if(mail.Type == MessageType.UploadPhoto)
+                    if (mail.Type == MessageType.UploadPhoto)
                     {
-                        dixplay.Photo = new Photo(JsonConvert.DeserializeObject<UploadPhoto>(mail.Payload));
-                        dixplay.Comments = new LinkedList<Comment>();
+                        var photo = new Photo(JsonConvert.DeserializeObject<UploadPhoto>(mail.Payload));
 
-                        Broadcast(sockets, Message.Build(dixplay));
+                        state.UploadPhoto(photo);
                     }
 
-                    else if(mail.Type == MessageType.UploadComment)
+                    else if (mail.Type == MessageType.UploadComment)
                     {
-                        dixplay.Comments.AddFirst(new Comment(JsonConvert.DeserializeObject<UploadComment>(mail.Payload)));
+                        var comment = new Comment(JsonConvert.DeserializeObject<UploadComment>(mail.Payload));
 
-                        Broadcast(sockets, Message.Build(dixplay.Comments));
+                        state.UploadComment(comment);
                     }
-        
+
+                    else if (mail.Type == MessageType.UploadVote)
+                    {
+                        var vote = JsonConvert.DeserializeObject<UploadVote>(mail.Payload);
+
+                        state.UploadVote(vote.ID);
+                    }
                 };
             });
 
@@ -67,11 +70,6 @@ namespace DixplayServerNETCore
                 Console.Write("Dixplay > ");
                 input = Console.ReadLine();
             }
-        }
-
-        static void Broadcast(List<IWebSocketConnection> sockets, string message)
-        {
-            sockets.ForEach(socket => socket.Send(message));
         }
     }
 }

@@ -4,46 +4,106 @@
 <head>
 
     <title>Dixplay</title>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/animation.css"> <!-- Keep this one first -->
+    <link rel="stylesheet" href="css/dialog.css">
     <link rel="stylesheet" href="css/dixplay.css">
 </head>
 
-<body onload="namePrompt()">
+<body>
 
     <div class="main-container">
         <div class="main-title">Dixplay</div>
-        <img id="displayMainPhoto" src="https://pay.google.com/about/static/images/social/knowledge_graph_logo.png" class="main-image">
+        <img id="displayMainPhoto" class="main-image zoom" src="img/empty.png">
+        <div class="main-controls">
+            <i id="addPhotoButton" class="material-icons">add_a_photo</i>
+            <i id="randomPhotoButton" class="material-icons">shuffle</i>
+            <i id="goFullscreenButton" class="material-icons">fullscreen</i>
+            <i id="helpDialogButton" class="material-icons">help</i>
+            <input id="uploadPhotoInput" type="file" accept="image/*" style="display: none;">
+        </div>
     </div>
-    <div class="comments-container">
-        <div class="comments-controls">
-                <input id="uploadPhotoInput" type="file" accept="image/*">
-				<button id="photoSubmit" class="submit-button"type="submit">submit</button>
+    <div class="body-container">
+        <div class="votable-container">
+            <div id="displayMainVotableExpires" class="votable-expires"></div>
+            <div id="displayMainVotable" class="votable-main">
+
+
+            </div>
         </div>
-        <div class="comments-title">
-            Comments
+        <div class="comments-container">
+            <div class="input-group comments-controls">
+                <input id="writeCommentInput" type="text" class="form-control" placeholder="Add a comment...">
+                <div class="input-group-append">
+                    <button id="sendCommentButton" class="btn btn-outline-secondary" type="button">Add</button>
+                </div>
+            </div>
+            <div id="displayMainComments" class="comments-group">
+
+            </div>
         </div>
-        <div id="displayMainComments" class="comments-group">
-			<div id="displayMessage" class="message-group"></div>
+
+        <div id="imageFullscreenDialog" class="dialog-fullscreen">
+            <img class="content" id="imageFullscreenDialogImage">
         </div>
-		<div id="commentContainer" class="comments-upload">
-		    <input id="writeCommentInput" class="comment-box" type="text" placeholder="Enter Comment">
-			<button id="uploadCommentInput" class="comment-button" type="button">Send</button>
-		</div>
-    </div>
+
+        <div id="welcomeDialog" class="dialog-welcome">
+            <div class="content">
+                <div class="input-group">
+                    <input id="welcomeDialogName" type="text" class="form-control" placeholder="Username">
+                </div>
+                <div class="main">
+                    By entering this website, you are confirming to the following terms. You must be at least 18 years
+                    of age. You must consent to user generated content and not hold the creators or owners liable in any
+                    way, shape, or form. If you are not of age, please leave the website. If you may be uncomfortable
+                    with the material present, please leave the website.
+                </div>
+                <div class="buttons">
+                    <button id="welcomeDialogEnterButton" type="button" class="btn btn-primary">Accept and
+                        Enter</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="helpDialog" class="dialog-help">
+            <div class="content">
+                <div class="main">
+                    Dixplay is a live social photo platform.
+                    <br> <br>
+                    Users are encouraged to discuss the photo on display and post new photos that will generate
+                    interesting discussion.
+                    <br> <br>
+                    Feel free to be creative!
+                    <br> <br>
+                    Developed by Nicholas Koehler, Graham Dubreuil, and Garrett Parris for CP476.
+                </div>
+            </div>
+        </div>
 
 </body>
 <script>
-	function namePrompt() {
-	  var person = prompt("Please enter your name:", "Steve");
-	  if (person == null || person == "") {
-		while(person==null || person== ""){
-			var person = prompt("Please enter your name:", "Steve");
-		}
-	  }
-	}
+    function namePrompt() {
+        var person = prompt("Please enter your name:", "Steve");
+        if (person == null || person == "") {
+            while (person == null || person == "") {
+                var person = prompt("Please enter your name:", "Steve");
+            }
+        }
+    }
 </script>
 <script type="text/javascript" src="js/globals.js"></script> <!-- Keep this one first -->
 <script type="text/javascript" src="js/server.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
 
 </html>

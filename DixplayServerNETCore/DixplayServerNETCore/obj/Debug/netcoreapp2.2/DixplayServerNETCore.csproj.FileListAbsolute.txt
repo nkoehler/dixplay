@@ -22,3 +22,15 @@ C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplaySer
 C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfo.cs
 C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.dll
 C:\Users\Nicholas\Desktop\CP 476\dixplay\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.deps.json
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.runtimeconfig.json
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.runtimeconfig.dev.json
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.dll
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.csprojAssemblyReference.cache
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.csproj.CoreCompileInputs.cache
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfoInputs.cache
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.AssemblyInfo.cs
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.dll
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\obj\Debug\netcoreapp2.2\DixplayServerNETCore.pdb
+C:\Users\Nicholas\Documents\School\CP 476\dixplay\DixplayServerNETCore\DixplayServerNETCore\bin\Debug\netcoreapp2.2\empty.png

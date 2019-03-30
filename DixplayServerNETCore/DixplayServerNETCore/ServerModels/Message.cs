@@ -8,10 +8,12 @@ namespace DixplayServerNETCore.ServerModels
         // 100 level is User -> Server messages
         UploadPhoto = 101, // new photo
         UploadComment = 102, // new comment
+        UploadVote = 103, // new vote
 
         // 200 level is Server -> User messages
-        GetDixplay = 201, // photo and comments
+        GetPhoto = 201, // photo
         GetComments = 202, // updated comments
+        GetVotable = 203, // votable photos
     }
 
     public class Message
@@ -39,14 +41,19 @@ namespace DixplayServerNETCore.ServerModels
             return JsonConvert.SerializeObject(this);
         }
 
-        public static string Build(Dixplay dixplay)
+        public static string Build(Photo photo)
         {
-            return Write(MessageType.GetDixplay, dixplay);
+            return Write(MessageType.GetPhoto, photo);
         }
 
         public static string Build(LinkedList<Comment> comments)
         {
             return Write(MessageType.GetComments, comments);
+        }
+
+        public static string Build(Votable votable)
+        {
+            return Write(MessageType.GetVotable, votable);
         }
 
         private static string Write(MessageType type, object data)
